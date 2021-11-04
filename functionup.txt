@@ -1,0 +1,125 @@
+in short, tech is the eating the world
+my name is Irshad ahmad
+
+
+
+
+functionUp:
+Functionsdpasjd kc kjdija?KSjd nuhw d;lkZJ;odi hais d.KSd ISKzndjqa hs;dj
+
+extra ordarinary efforts really help. 
+
+
+functionUp is for techie students.
+
+
+
+
+
+
+code:
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~
+$ cd
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~
+$ pwd
+/c/Users/
+hp@DESKTOP-HQFSEV4
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~
+$ /d:
+bash: /d:: No such file or directory
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~
+$ mkdir assignment
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~
+$ ls
+ 
+ myFie.txt
+ node_modules/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+  test/
+'~$E2.docx'
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~
+$ cd assignment
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment
+$ mkdir source
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment
+$ mkdir destination
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment
+$ ls
+destination/  source/
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment
+$ cd source
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/source
+$ touch file.txt
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/source
+$ cat
+
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/source
+$ dir
+file.txt
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/source
+$ rename file.txt functionUp.txt
+bash: rename: command not found
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/source
+$ ren^C
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/source
+$ ren file.txt functionUp.txt
+bash: ren: command not found
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/source
+$ cat >file.txt
+
+
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/source
+$ cat >file.txt
+in short, tech is the eating the world
+my name is Irshad ahmad
+
+
+ hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/source
+$ cd..
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/destination
+$
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/destination
+$ vim file.txt
+
+hp@DESKTOP-HQFSEV4 MINGW64 ~/assignment/destination
+$ grep -i "functionUp" file.txt
+functionUp:
+$ rename file.txt functionUp.txt
+$ ren file.txt functionUp.txt
+
+
