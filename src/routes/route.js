@@ -1,9 +1,24 @@
+//Author mir irshad
 const express = require('express');
 
 const router = express.Router();
 
-router.get('/test-me', function (req, res) {
-    res.send('My first ever api!')
-});
+const AuthorsModel = require('../models/AuthorsModel')
+
+
+const BooksModel = require('../models/BooksModel')
+const BooksController = require('../controller/BooksController')
+
+
+//...............API'S......................//
+router.post('/createAuthors', BooksController.createAuthors)
+
+router.post('/createBook', BooksController.createBook);
+router.get('/getBook', BooksController.getBook)
+router.post('/publisher', BooksController.publisher)
+router.get('/getBooks',  BooksController.getBooks  );
+
+
+
 
 module.exports = router;
