@@ -8,9 +8,25 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
+const midGlb = function (req, res, next) {
+
+    console.log(new Date().toLocaleString())
+    console.log(req.ip)
+    console.log(req.originalUrl)
+    next()
+
+}
+app.use(midGlb)
+
+
+
+
 const mongoose = require('mongoose')
 mongoose.connect("mongodb+srv://users-open-to-all:hiPassword123@cluster0.uh35t.mongodb.net/Irshad_Mir-db?retryWrites=true&w=majority",
   { useNewUrlParser: true })
+  
   .then(() => console.log('mongodb running on 27017 and connected'))
   .catch(err => console.log(err))
 
