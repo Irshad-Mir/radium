@@ -1,16 +1,17 @@
-const express = require('express');
+const express = require("express");
 
 const router = express.Router();
 
-const userModel= require("../models/userModel")
-const productModel= require("../models/loginModel")
 
-const controler = require("../controllers/userController")
-const middleware = require("../middleware/middleWare")
+const authorModel = require("../models/authorModel");
+const authorController = require("../controllers/authorController");
+const blogModel = require("../models/blogModel");
+const blogController = require("../controllers/blogController");
 
-router.post('/createUser' ,controler.createUser  );
-router.post('/login' ,controler.login );
-router.get('/users/:userId', middleware.tokenCheck,controler.dataById );
-router.put('/users/:userId',middleware.tokenCheck ,controler.updateName );
 
+
+
+router.post("/createAuthor", authorController.createAuthor);
+router.post("/createBlogs", blogController.createBlogs);
+router.get("/getBlog", blogController.getBlog);
 module.exports = router;
