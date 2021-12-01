@@ -8,14 +8,18 @@ const AuthorController = require("../controllers/authorController");
 const BlogModel = require("../models/blogModel");
 const BlogController = require("../controllers/blogController");
 
+//.........phase 1 API'S.............//
 
 
+router.post("/createAuthor", Middleware.emailValidation, AuthorController.createAuthor);
+router.post("/createBlogs", Middleware.checkAuthentication, BlogController.createBlogs);
+router.get("/getBlog", Middleware.checkAuthentication, BlogController.getBlog);
+router.put("/updateBlog/:blogId", Middleware.checkAuthentication, BlogController.midUpdateBlog);
 
-router.post("/createAuthor", Middleware.validation, AuthorController.createAuthor);
-router.post("/createBlogs", BlogController.createBlogs);
-router.get("/getBlog", BlogController.getBlog);
-router.put("/updateBlog/:blogId", BlogController.BlogsUpdate);
-router.delete("/deleteBlogsp/:blogId", BlogController.deleteBlogsWithId);
-router.delete("/deleteBlogsq", BlogController.deleteBlogsWithQuery);
+router.delete("/deleteBlogsp/:blogId",Middleware.checkAuthentication,BlogController.midDeleteBlogsWithId);
+
 router.post("/userLogin", AuthorController.login);
+
+
+
 module.exports = router;

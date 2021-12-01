@@ -3,7 +3,7 @@ const AuthorController = require("../controllers/authorController");
    
 const jwt = require("jsonwebtoken");
 
-const validation = async function (req, res, next) {
+const emailValidation = async function (req, res, next) {
   let data = req.body.email;
   if (data) {
     const validEmail =
@@ -18,11 +18,11 @@ const validation = async function (req, res, next) {
   }
 };
 
-let tokenCheck = function (req, res, next) {
+let checkAuthentication = function (req, res, next) {
   let token = req.headers["x-api-key"];
   let validToken = jwt.verify(token, "radiumIrs");
   if (validToken) {
-    req.body.validToken = validToken;
+    req.validToken = validToken;
     next();
   } else {
     res.send({ status: false, msg: "token is invalid" });
@@ -30,4 +30,4 @@ let tokenCheck = function (req, res, next) {
 };
 
 
-module.exports = { validation, tokenCheck };
+module.exports = { emailValidation, checkAuthentication };
