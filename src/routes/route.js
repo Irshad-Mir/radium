@@ -1,16 +1,16 @@
 const express = require('express');
-
 const router = express.Router();
+const collegeController = require('../controllers/collegeController')
+const internController = require('../controllers/internController')
 
-const userModel= require("../models/userModel")
-const productModel= require("../models/loginModel")
 
-const controler = require("../controllers/userController")
-const middleware = require("../middleware/middleWare")
 
-router.post('/createUser' ,controler.createUser  );
-router.post('/login' ,controler.login );
-router.get('/users/:userId', middleware.tokenCheck,controler.dataById );
-router.put('/users/:userId',middleware.tokenCheck ,controler.updateName );
+
+
+router.post("/colleges",  collegeController.createColleges)
+
+router.post("/interns",  internController.createIntern);
+
+router.get("/collegeDetails",  internController.getAllInterns);
 
 module.exports = router;
