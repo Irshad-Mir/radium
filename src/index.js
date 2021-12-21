@@ -5,7 +5,7 @@ var multer = require('multer') // HERE
 const route = require('./routes/route.js');
 
 const app = express();
-
+///////
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer().any()) // HERE
